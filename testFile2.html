@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="context" placeholder="입력하세요."/>
+    <button id="send">send</button>
+    <button id="view">창 확인</button>
+    <script>
+        let winObj;
+
+        document.querySelector("#send").addEventListener("click", () => {
+            console.log("보냅니다 : " + document.querySelector("#context").value)
+            winObj.postMessage(document.querySelector("#context").value, "*");
+        })
+
+        document.querySelector("#view").addEventListener("click", () => {
+            winObj = window.open("file:///D:/vstest/testFile3.html");
+        })
+    </script>
+</body>
+</html>
