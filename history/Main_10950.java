@@ -7,8 +7,9 @@ import java.util.Iterator;
 import java.util.StringTokenizer;
 import java.util.stream.Stream;
 
-// last problem solving
-public class Main {
+// history [site] [problem number] [url]
+// history baeckjoon 10950 https://www.acmicpc.net/problem/10950
+public class Main_10950 {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         int cnt = Integer.parseInt(bf.readLine());  // 5
