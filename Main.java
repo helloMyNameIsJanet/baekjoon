@@ -10,6 +10,7 @@ import java.util.stream.Stream;
 public class Main {
     public static void main(String[] args) throws IOException {
         // test commit
+        // 수정
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         int cnt = Integer.parseInt(bf.readLine());  // 5
 
