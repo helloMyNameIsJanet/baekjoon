@@ -3,19 +3,15 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.Iterator;
-import java.util.StringTokenizer;
-import java.util.stream.Stream;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.ArrayList;
-
-// last problem solving
-public class Main {
+// history [site] [problem number] [url]
+// history baeckjoon 5597 https://www.acmicpc.net/problem/5597
+public class Main_5597 {
     public static void main(String[] args) throws IOException {
         // X대학 M교수님은 프로그래밍 수업을 맡고 있다. 교실엔 학생이 30명이 있는데, 학생 명부엔 각 학생별로 1번부터 30번까지 출석번호가 붙어 있다.
         // 교수님이 내준 특별과제를 28명이 제출했는데, 그 중에서 제출 안 한 학생 2명의 출석번호를 구하는 프로그램을 작성하시오.
+        // 1~30까지 배열을 채운 다음, 입력받은 번호 idx의 값을 0으로 초기화처리 한 후 => 값이 0이 아닐 때에만 출력함. 
+        // --> list로 전환해서 제거하는 쪽으로 다시 생각해보기
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         
         int[] arr = new int[30];
@@ -40,26 +36,5 @@ public class Main {
         }
         bw.flush();
         bw.close();
-
-        // int playCount = Integer.parseInt(st.nextToken());   // 공 던지기 수
-
-        // BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        // for(int i = 0; i < playCount; i++) {
-        //     String numbers = bf.readLine();
-        //     StringTokenizer st2 = new StringTokenizer(numbers);
-
-        //     int I = Integer.parseInt(st2.nextToken());
-        //     int J = Integer.parseInt(st2.nextToken());
-        //     int K = basket[I-1];
-        //     basket[I-1] = basket[J-1];
-        //     basket[J-1] = K;
-        // }
-
-        // for(int i = 0; i < basket.length; i++) {
-        //     bw.write(basket[i] +" ");
-        // }
-        
-        // bw.flush();
-        // bw.close();
     }
 }
