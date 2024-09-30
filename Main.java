@@ -20,11 +20,14 @@ public class Main {
             arr[i] = Integer.parseInt(bf.readLine()) % 42;
         }
 
-        // stream 으로 중복 제거
-        arr = Arrays.stream(arr).distinct().toArray();
+        // set 으로 중복 제거
+        Set<Integer> hs = new HashSet<>();
+        for (int i : arr) {
+            hs.add(i);
+        }
 
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        bw.write(arr.length + "");
+        bw.write(hs.size() + "");
         bw.flush();
         bw.close();
     }
