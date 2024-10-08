@@ -3,21 +3,12 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.OptionalDouble;
-import java.util.OptionalInt;
-import java.util.Set;
 import java.util.StringTokenizer;
-import java.util.stream.IntStream;
-import java.util.stream.LongStream;
 import java.util.stream.DoubleStream;
-import java.util.stream.Stream;
 
-// last problem solving
-public class Main {
+// history [site] [problem number] [url]
+// history baeckjoon 1546 https://www.acmicpc.net/problem/1546
+public class Main_1546 {
     public static void main(String[] args) throws IOException {
         // 세준이는 기말고사를 망쳤다. 세준이는 점수를 조작해서 집에 가져가기로 했다. 일단 세준이는 자기 점수 중에 최댓값을 골랐다. 이 값을 M이라고 한다. 그리고 나서 모든 점수를 점수/M*100으로 고쳤다.
         // 예를 들어, 세준이의 최고점이 70이고, 수학점수가 50이었으면 수학점수는 50/70*100이 되어 71.43점이 된다.
@@ -56,3 +47,9 @@ public class Main {
         bw.close();
     }
 }
+
+/**
+ * double + for 문 조합 => 메모리 15052 kb, 시간 108 ms
+ * float + for 문 조합 => 메모리 16480 kb, 시간 116 ms
+ * double + for 문 조합 => 메모리 16872 kb, 시간 120 ms
+ */

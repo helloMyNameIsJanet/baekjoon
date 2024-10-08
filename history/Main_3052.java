@@ -6,7 +6,10 @@ import java.io.OutputStreamWriter;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Map;
+import java.util.OptionalInt;
 import java.util.Set;
+import java.util.stream.IntStream;
+import java.util.stream.LongStream;
 
 // history [site] [problem number] [url]
 // history baeckjoon 3052 https://www.acmicpc.net/problem/3052
@@ -21,11 +24,17 @@ public class Main_3052 {
             arr[i] = Integer.parseInt(bf.readLine()) % 42;
         }
 
-        // stream 으로 중복 제거
-        arr = Arrays.stream(arr).distinct().toArray();
+        // https://futurecreator.github.io/2018/08/26/java-8-streams/#google_vignette
+        // 결과 만들기 > Calculating 항목 참조
+        long count = IntStream.of(arr).count();
+        long sum = IntStream.of(arr).sum();
+
+        OptionalInt min = IntStream.of(arr).min();
+        OptionalInt max = IntStream.of(arr).max();
 
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        bw.write(arr.length + "");
+        bw.write(min.getAsInt()+"\n");
+        bw.write(max.getAsInt()+"\n");
         bw.flush();
         bw.close();
     }
