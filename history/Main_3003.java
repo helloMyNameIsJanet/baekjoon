@@ -6,7 +6,7 @@ import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
 // last problem solving
-public class Main {
+public class Main_3003 {
     public static void main(String[] args) throws IOException {
         // 동혁이는 오래된 창고를 뒤지다가 낡은 체스판과 피스를 발견했다.
         // 체스판의 먼지를 털어내고 걸레로 닦으니 그럭저럭 쓸만한 체스판이 되었다. 하지만, 검정색 피스는 모두 있었으나, 흰색 피스는 개수가 올바르지 않았다.
@@ -30,6 +30,5 @@ public class Main {
 
         bw.flush();
         bw.close();
-
     }
 }
